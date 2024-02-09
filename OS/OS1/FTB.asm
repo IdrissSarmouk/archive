@@ -1,46 +1,29 @@
 #Find The Byte Program reserves a byte of data for a character then prints out that character on the screen
 
+mov ah , 0 x0e 
 
-
-mov ah, 0x0e
-
-#1st
-mov al, the_secret
-int 0x10
-
-#2nd
-move al, [the_secret]
-int 0x10
-
-#3rd
-move bx, 
-
-
-
-
-A simple boot sector program that demonstrates addressing.
-;
-mov ah , 0 x0e ; int 10/ ah = 0eh -> scrolling teletype BIOS routine
-; First attempt
+#First attempt
 mov al , the_secret
-int 0 x10 ; Does this print an X?
-; Second attempt
+int 0 x10 
+
+#Second attempt
 mov al , [ the_secret ]
-int 0 x10 ; Does this print an X?
-; Third attempt
+int 0 x10 
+
+#Third attempt
 mov bx , the_secret
 add bx , 0 x7c00
 mov al , [bx]
-int 0 x10 ; Does this print an X?
-; Fourth attempt
+int 0 x10
 
 
-
+#Fourth attempt
 mov al , [0 x7c1e ]
-int 0 x10 ; Does this print an X?
-jmp $ ; Jump forever.
+int 0 x10 
+jmp $ 
 the_secret :
 db "X "
-; Padding and magic BIOS number.
+
+
 times 510 -( $ - $$ ) db 0
 dw 0 xaa55
