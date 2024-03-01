@@ -1,0 +1,6 @@
+This project examines COVID-19 genome sequences through a structured framework. The modules encompass exploratory data analysis, K-means clustering, and regression modeling for predicting bit scores. The primary objective is to discern genomic properties pertinent to drug targeting, utilizing mutation analysis and advanced predictive modeling methodologies. The toolkit integrates rigorous data extraction, meticulous clustering optimization, and thorough regression model assessments to contribute to the academic discourse on potential drug development strategies for combating COVID-19.
+
+
+
+
+
