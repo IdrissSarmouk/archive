@@ -1,1 +1,1 @@
-Jupyter notebooks, Python, C++, R
+Snippets, legacy, exercises, and ideas
